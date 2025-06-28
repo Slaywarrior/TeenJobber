@@ -29,18 +29,10 @@ Créer une plateforme moderne, ludique et professionnelle qui permet :
 
 - **Feed central** des offres d'emploi avec barre de recherche 🔍 et filtres par catégories (baby-sitting, restauration, logistique, etc.)
 
-## 🎨 Design & ambiance
-
-Un style coloré mais pro avec une ambiance jeune et dynamique :
-- Couleurs dominantes : **bleu, blanc, violet, jaune, rouge**
-- Interface intuitive et responsive
-- Ton accessible, bienveillant, motivant
 
 ## 🔧 Techno utilisées (prévu)
 
-- **HTML / CSS / JavaScript**
-- JSON ou LocalStorage pour les premières données
-- (Plus tard : Firebase ou autre backend léger)
+- **HTML / CSS**
 
 ## 👀 Pourquoi ce projet ?
 
@@ -48,5 +40,3 @@ Parce que trouver un job d'été quand on a moins de 18 ans, c'est souvent galè
 
 ---
 
-📌 *Projet initié par Dora, 15 ans, passionnée par le numérique et l'aéronautique, avec une bonne dose d'idées et d'ambition.*  
-✨ *Parce que les jeunes aussi méritent des outils pros pour se lancer !*
