@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription Recruteur - TeenJobber</title>
+  <link rel="stylesheet" href="index.css">
+  <script defer>
+    function toggleRecruiterForm(type) {
+      const companyFields = document.getElementById('company-fields');
+      const personalFields = document.getElementById('personal-fields');
+
+      if (type === 'company') {
+        companyFields.style.display = 'block';
+        personalFields.style.display = 'none';
+      } else {
+        companyFields.style.display = 'none';
+        personalFields.style.display = 'block';
+      }
+    }
+
+    function validateRecruiterForm(event) {
+      const pass = document.getElementById("password").value;
+      const confirmPass = document.getElementById("confirm-password").value;
+      if (pass !== confirmPass) {
+        alert("Les mots de passe ne correspondent pas ❌");
+        event.preventDefault();
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="auth-container">
+    <h1 class="title">Inscription <span>Recruteur</span></h1>
+    <p class="subtitle">Souhaitez-vous vous inscrire :</p>
+
+    <div class="button-container">
+      <button class="auth-button" onclick="toggleRecruiterForm('company')">🔹 Pour une entreprise</button>
+      <button class="auth-button recruiter" onclick="toggleRecruiterForm('personal')">🔸 À titre personnel</button>
+    </div>
+
+    <form action="recruiter_profile.html" onsubmit="validateRecruiterForm(event)">
+      <div id="company-fields" style="display: none;">
+        <input type="text" name="company-name" placeholder="Nom de l'entreprise" required>
+        <input type="text" name="company-sector" placeholder="Secteur d'activité" required>
+        <input type="email" name="company-email" placeholder="Email professionnel" required>
+      </div>
+
+      <div id="personal-fields" style="display: none;">
+        <input type="text" name="fullname" placeholder="Nom complet" required>
+        <input type="email" name="personal-email" placeholder="Votre email" required>
+        <input type="text" name="occupation" placeholder="Profession (facultatif)">
+      </div>
+
+      <input type="password" name="password" id="password" placeholder="Mot de passe" required>
+      <input type="password" id="confirm-password" placeholder="Confirmez le mot de passe" required>
+
+      <button type="submit" class="auth-button">Créer mon profil recruteur</button>
+    </form>
+  </div>
+</body>
+</html>
